@@ -37,11 +37,11 @@
 }
 
 @keyframes slider {
-  0%   { opacity: 0; }
-  5%   { opacity: 1; }
-  45%  { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 0; }
+  0%   { opacity: 0; z-index: 2; }
+  5%   { opacity: 1;z-index: 1; }
+  45%  { opacity: 1;z-index: 1; }
+  50%  { opacity: 0; z-index: 2;}
+  100% { opacity: 0;z-index: 1; }
 }
 
 .hero-slider::after {
