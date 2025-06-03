@@ -1,0 +1,30 @@
+/* Footer layout */ 
+@use'../../scss/base/variables';
+
+footer{
+    background-color: black;
+    backdrop-filter: blur(10px);
+    color: variables.$bianco;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+
+    a {
+        color: variables.$arancio-vivo;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-links {
+        margin-top: 10px;
+
+        a {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    }
+}

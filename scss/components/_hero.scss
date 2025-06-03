@@ -1,0 +1,100 @@
+/* Hero section */ 
+@use'../../scss/base/variables';
+
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  animation: slider 10s infinite ease-in-out;
+  z-index: 0;
+}
+
+.slide1 {
+  background-image: url('../../img/coperta.JPG');
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background-image: url('../../img/coperta2.JPG');
+  animation-delay: 5s;
+}
+
+@keyframes slider {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 30px 10px;
+  margin-bottom: 40px;
+  color: variables.$bianco;
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .hero-left {
+    max-width: 50%;
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: variables.$oro-caldo;
+
+      @media (max-width: 768px) {
+        font-size: 25px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: variables.$arancio-vivo;
+
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+  }
+}

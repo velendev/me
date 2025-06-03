@@ -1,0 +1,20 @@
+/* Bottoni */ 
+@use'../../scss/base/variables';
+.hero-right {
+    .cta-button {
+      margin:20px 20px;
+      padding: 12px 24px;
+      background-color: variables.$arancio-vivo;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: darken(variables.$arancio-vivo, 10%);
+        transform: scale(1.05);
+      }
+    }
+  }
