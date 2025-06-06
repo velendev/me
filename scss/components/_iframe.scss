@@ -1,43 +1,45 @@
+@use'../../scss/base/variables';
 .about-card {
   display: flex;
   flex-wrap: wrap;
-  background-color: #111;
-  color: #f0f0f0;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  color: #f2f2f2;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  max-width: 900px;
-  margin: 40px auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  max-width: 1000px;
+  margin: 60px auto;
 
   .video-box {
-    flex: 1 1 300px;
-    height: 400px; // << Altezza controllata
-    min-width: 280px;
+    flex: 0 0 320px;
+    height: 400px;
 
     iframe {
       width: 100%;
       height: 100%;
       border: none;
       display: block;
+      border-radius: 0; // togli per unione perfetta con la card
     }
   }
 
   .text-box {
-    flex: 1 1 400px;
-    padding: 30px;
+    flex: 1;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     h2 {
-      margin-bottom: 15px;
-      font-size: 24px;
-      color: #00aaff;
+      font-size: 28px;
+      color: variables.$oro-caldo;
+      margin-bottom: 20px;
     }
 
     p {
-      line-height: 1.6;
-      margin-bottom: 10px;
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 15px;
     }
   }
 }
