@@ -1,1 +1,18 @@
 @use'../../scss/base/variables';
+
+@media (max-width: 768px) {
+  .floating-cta {
+    bottom: 10px;
+    right: 10px;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;// da riga a colonna
+    gap: 10px;
+
+    button {
+      font-size: 12px;
+      padding: 10px 16px;
+      min-width: auto;
+    }
+  }
+}
