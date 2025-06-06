@@ -17,3 +17,34 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+
+    .video-box {
+      width: 100vw; // 👈 forza tutta la larghezza dello schermo
+      height: auto;
+      margin: 0;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 9 / 16;
+        display: block;
+      }
+    }
+
+    .text-box {
+      padding: 20px;
+      
+      }
+    }
+  }
+  .about-card .text-box {
+    padding: 20px;
+    align-items: center; 
+    text-align: center;  
+  }
